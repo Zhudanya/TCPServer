@@ -134,10 +134,9 @@ void *up_server(void *arg) {
             n=read(connfd, buf, MAXLINE); //读取客户端传来的字符串
             if(!strncmp(buf, "quit", 4))
                 break;
-            write(1, buf, n);//先打印到服务器端的屏幕上
-            
-            for(i=0; i<n; i++) //转换成大写
-                buf[i] = toupper(buf[i]);
+		
+            //具体的功能实现
+	    //。。。。。。。。
             
             write(connfd, buf, n);//写回给客户端
         }
